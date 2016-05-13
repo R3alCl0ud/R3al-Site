@@ -1,0 +1,240 @@
+{
+	"username": "Snazzah",
+	"discriminator": "0371",
+	"id": "158049329150427136",
+	"avatar": "fd06ae005a53ef1fa2164bd623988565",
+	"provider": "discord",
+	"guilds": [
+		{
+			"owner": false,
+			"permissions": 103926785,
+			"icon": "ae140f33228348df347067059474bb11",
+			"id": "41771983423143937",
+			"name": "Discord Developers"
+		},
+		{
+			"owner": false,
+			"permissions": 103926785,
+			"icon": "2aab26934e72b4ec300c5aa6cf67c7b3",
+			"id": "81384788765712384",
+			"name": "Discord API"
+		},
+		{
+			"owner": false,
+			"permissions": 36948993,
+			"icon": "2a34de4bf81db82cfcddb91180198814",
+			"id": "81812480254291968",
+			"name": "Discord Dev School"
+		},
+		{
+			"owner": false,
+			"permissions": 49351683,
+			"icon": "6e5729ed5c12d5af558d80d7a194c3f9",
+			"id": "86004744966914048",
+			"name": "BetterDiscord"
+		},
+		{
+			"owner": false,
+			"permissions": 103926784,
+			"icon": "7873b8de0dcb10da09320c5c611bcfbc",
+			"id": "98226572468690944",
+			"name": "osu! Game"
+		},
+		{
+			"owner": false,
+			"permissions": 103926785,
+			"icon": "18d5810f8d78733ccdf76ac202b4aee8",
+			"id": "105010597954871296",
+			"name": "#BooBot Hangout"
+		},
+		{
+			"owner": false,
+			"permissions": 36768768,
+			"icon": "330518515d9bf07cb03005f4ee7df6e8",
+			"id": "108439985920704512",
+			"name": "# Looking For Gamers"
+		},
+		{
+			"owner": false,
+			"permissions": 103926785,
+			"icon": "76dd2dbbd47f117b5fbb912170cd6d47",
+			"id": "110373943822540800",
+			"name": "Discord Bots"
+		},
+		{
+			"owner": false,
+			"permissions": 36817921,
+			"icon": "5fd11f41cf61d240ec081f1e0121493e",
+			"id": "117523346618318850",
+			"name": "#NadekoLog"
+		},
+		{
+			"owner": false,
+			"permissions": 36953089,
+			"icon": "707ad951ea1197280ab8db74641956f6",
+			"id": "128604330386391040",
+			"name": "06:06 UTC-4 | 18:06 UTC+8"
+		},
+		{
+			"owner": false,
+			"permissions": 36953089,
+			"icon": null,
+			"id": "128674827006509056",
+			"name": "1 7 : 0 6"
+		},
+		{
+			"owner": false,
+			"permissions": 36817921,
+			"icon": "bdbf57c1d936203f27855ac2735c3db0",
+			"id": "135496553786769408",
+			"name": "! Bot-chan Official Server"
+		},
+		{
+			"owner": false,
+			"permissions": 36817921,
+			"icon": "f2881fcaf8e4a8821f4edede0f0bf3f3",
+			"id": "135828088117395467",
+			"name": "WolfPack"
+		},
+		{
+			"owner": false,
+			"permissions": 36822016,
+			"icon": "d7a66aed88932af46349f89b0a96747c",
+			"id": "138578120440545280",
+			"name": "lapzbot"
+		},
+		{
+			"owner": false,
+			"permissions": 36822017,
+			"icon": "e0f15be824a6ee3ba39a579cfd009e90",
+			"id": "140668702382227456",
+			"name": "Hive Empires"
+		},
+		{
+			"owner": false,
+			"permissions": 103926785,
+			"icon": "c6a3d5d9dbbff0df541fa632a4415963",
+			"id": "143219785671507968",
+			"name": "PC Master Race with 100% less nvidia"
+		},
+		{
+			"owner": false,
+			"permissions": 124910611,
+			"icon": "089cb6deb36d9ac11cc1089d41f773dd",
+			"id": "145681585037901824",
+			"name": "Twitch & Chill"
+		},
+		{
+			"owner": false,
+			"permissions": 103926784,
+			"icon": "99c56b33b479390b5f1a79de1e1e6d12",
+			"id": "147840106751852544",
+			"name": "MarshChat"
+		},
+		{
+			"owner": false,
+			"permissions": 103926785,
+			"icon": "cf8bd4fb6c1358ccec157a95b0297f7b",
+			"id": "149866687615729665",
+			"name": "Kiwi Hangout"
+		},
+		{
+			"owner": false,
+			"permissions": 104070144,
+			"icon": "463edef351613c2a6c0bb00b5e1d3b44",
+			"id": "155785349623185408",
+			"name": "0131 Network"
+		},
+		{
+			"owner": false,
+			"permissions": 36953089,
+			"icon": "41c2113b0dfc9ced3d4fe59892cd4ca4",
+			"id": "155791448938250241",
+			"name": "AgarCentral"
+		},
+		{
+			"owner": false,
+			"permissions": 36801536,
+			"icon": "c5b56aaff515efed9a5adff270b30241",
+			"id": "155876039044759552",
+			"name": "This is your Stahp"
+		},
+		{
+			"owner": false,
+			"permissions": 536083519,
+			"icon": "45e5ac0096dcdca568e4f9bfc0756b87",
+			"id": "158091762059968512",
+			"name": "𝔓𝔩𝔞𝔷𝔪𝔞 𝔅𝔲𝔯𝔰𝔱 𝟸"
+		},
+		{
+			"owner": false,
+			"permissions": 36817920,
+			"icon": "3210dadbe1214da3eeaf5860401040a7",
+			"id": "159962941502783488",
+			"name": "Mee6 The Bot"
+		},
+		{
+			"owner": false,
+			"permissions": 104061952,
+			"icon": "1a8ede6efc6fd1f4fa499db5607624bc",
+			"id": "163535447752966145",
+			"name": "The Church of Plaza"
+		},
+		{
+			"owner": false,
+			"permissions": 103930881,
+			"icon": "7804a10ed22bc52860178475f3a75356",
+			"id": "164383002351239168",
+			"name": "- z discord team -"
+		},
+		{
+			"owner": true,
+			"permissions": 536083519,
+			"icon": "3111a3fc3c7eff2dedaab88f359eb347",
+			"id": "166705905147052034",
+			"name": "Snazzah's Hangout"
+		},
+		{
+			"owner": false,
+			"permissions": 66560,
+			"icon": "0d52e6033f1ed9c09c6a12005d0b3612",
+			"id": "169735127583293441",
+			"name": "Robots Anonymous"
+		},
+		{
+			"owner": false,
+			"permissions": 536083519,
+			"icon": "562b89a0dd6ad3f47a8ce95150f4fbd2",
+			"id": "172382467385196544",
+			"name": "Discord Dungeons"
+		},
+		{
+			"owner": false,
+			"permissions": 103898113,
+			"icon": null,
+			"id": "172755638852648960",
+			"name": "LittleFriend Chat"
+		},
+		{
+			"owner": false,
+			"permissions": 36817921,
+			"icon": "426759ca9919c2ecb587c4222284bef9",
+			"id": "173099246613037058",
+			"name": "\"Secret Quote Server\""
+		},
+		{
+			"owner": false,
+			"permissions": 536083519,
+			"icon": "95b25f6434da2e4db74719cff9bd5700",
+			"id": "174165103648702466",
+			"name": "Discord Dungeoneers"
+		},
+		{
+			"owner": false,
+			"permissions": 0,
+			"icon": null,
+			"id": "179302681997869057",
+			"name": "Pqp239 Bot Test"
+		}
+	]
+}

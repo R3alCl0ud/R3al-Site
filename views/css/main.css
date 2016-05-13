@@ -1,0 +1,362 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+							vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+	font-family: -apple-system, Myraid Set Pro, "Helvetica Neue", Tahoma, Verdana, Arial, sans-serif;
+	color: #ffffff;
+	background-color: #6b1b00;
+}
+
+title {
+	color: #ffffff;
+}
+
+.add {
+	position: absolute;
+	right: 0;
+	left: 0;
+	text-align: center;
+	vertical-align: middle;
+	z-index: 1;
+	transition: color 250ms;
+	transition: background 250ms;
+	transition: border 100ms;
+	margin-right: auto;
+	margin-left: auto;
+	border-radius: 30px;
+	border-color: #b03000;
+	height: 55px;
+	width: 190px;
+	color: #090707;
+	top: 75%;
+	background-color: #414141;
+}
+
+p1 {
+	position: relative;
+	right: 0;
+	left: 0;
+	padding: 17px 30px;
+	white-space: nowrap;
+	top: 18px;
+	vertical-align: text-bottom;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+p2 {
+	position:relative;
+	top:10px;
+	font-size: 125%;
+}
+p3 {
+	font-size: 125%;
+}
+
+.add a {
+	height: 100px;
+	transition: padding 1s;
+	top: 10px;
+	text-decoration: none;
+}
+
+.add a:hover {
+	top: 15;
+	padding: 25;
+	z-index: 0;
+}
+
+.add:hover {
+	background-color: #252525;
+	border-style: dashed;
+	border-width: 2.5px;
+	color: #F08430;
+	height: 50px;
+	border-color: #F08430;
+}
+
+H1
+ {
+	position: absolute;
+	text-align: center;
+	font-size: 150%;
+	color: white;
+	top: 38%;
+	left: 0;
+	right: 0;
+	z-index:2;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.main-cont {
+	position: fixed;
+	border-radius: 30px;
+	border-width: 1px;
+	border-style: solid;
+	min-height: 500px;
+	border-color: #F08430;
+	height: 80%;
+	top: 7%;
+	background-color: #6b1b00;
+	max-width: 1500px;
+	min-width: 400px;
+	width: 90%;
+	right: 0;
+	left: 0;
+	z-index:0;
+	text-align:center;
+	margin-left: auto;
+	margin-right:auto;
+}
+
+.bottom-nav {
+	position: fixed;
+	bottom: 0;
+	background-color: #000000;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+nav {
+	position: fixed;
+	background-color: #202020;
+	font-size: 100%;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin-left: auto;
+	margin-right: auto;
+	list-style-type: none;
+	padding: 0;
+	border-style: solid;
+	border-top-width: 1px;
+	border-top-color: black;
+}
+select {
+	position: absolute;
+	top: 400px;
+	padding: 8px 12px;
+	font-size: 100%;
+	left: 0;
+	right: 0;
+	width: 320px;
+	margin-left: auto;
+	margin-right: auto;
+}
+option {
+	font-size: 100%;
+	color: #4f4f4f;
+}
+
+lii {
+	display: block;
+	color: #F08430;
+	border-left-width: 1px;
+	border-left-color: black;
+	border-right-width: 1px;
+	text-align: center;
+	padding: 10px 0px;
+	text-decoration: none;
+	background-color: black;
+}
+
+a {
+	color: #F08430;
+}
+
+.left-cont {
+	position: absolute;
+	left: 3%;
+	background-color: #545454;
+	border-radius: 19px;
+	height: 90%;
+	width: 25%;
+	top: 5%;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #F08430;
+}
+
+.serverSelect {
+	position: absolute;
+	width:100%;
+	top: 400px;
+	left:0;
+	right:0;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.center-cont {
+	position:absolute;
+	background-color: #545454;
+	border-radius: 19px;
+	height: 85%;
+	min-width: 70%;
+	width: 25%;
+	top: 10%;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #F08430;
+	left:0;
+	right:0;
+	margin-left:auto;
+	margin-right:auto;
+	
+}
+
+
+H2 {
+	position: relative;
+	top: 20px;
+	text-indent: 15%;
+}
+
+H3 {
+	position: relative;
+	top: 20px;
+	z-index:1;
+	left:0;
+	right:0;
+	margin-left:auto;
+	margin-right:auto;
+}
+

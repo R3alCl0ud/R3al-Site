@@ -1,0 +1,93 @@
+{
+	"username": "wagyourtail",
+	"discriminator": "4710",
+	"id": "100748674849579008",
+	"avatar": "45d17a23f56ad97d57cbbd3115ad5628",
+	"provider": "discord",
+	"guilds": [
+		{
+			"owner": false,
+			"permissions": 36817921,
+			"icon": "743cf518ff0feed6b488f9a5ec6bd66d",
+			"id": "42463947818795009",
+			"name": "Technic"
+		},
+		{
+			"owner": false,
+			"permissions": 103926785,
+			"icon": "2aab26934e72b4ec300c5aa6cf67c7b3",
+			"id": "81384788765712384",
+			"name": "Discord API"
+		},
+		{
+			"owner": false,
+			"permissions": 536083519,
+			"icon": "6b0973fa9daec79a25bf0d57b4adc704",
+			"id": "105399615683092480",
+			"name": "Cl0ud Tail"
+		},
+		{
+			"owner": false,
+			"permissions": 103926785,
+			"icon": "76dd2dbbd47f117b5fbb912170cd6d47",
+			"id": "110373943822540800",
+			"name": "Discord Bots"
+		},
+		{
+			"owner": true,
+			"permissions": 536083519,
+			"icon": null,
+			"id": "115199460597825544",
+			"name": "WagyourServer"
+		},
+		{
+			"owner": false,
+			"permissions": 36953089,
+			"icon": null,
+			"id": "116343057951096838",
+			"name": "Alex server of awesomeness"
+		},
+		{
+			"owner": false,
+			"permissions": 36801536,
+			"icon": "40e01e108b38f2547bfc9fbbed57d906",
+			"id": "129489631539494912",
+			"name": "Rhino Bot Help"
+		},
+		{
+			"owner": false,
+			"permissions": 103926784,
+			"icon": "fd92972c04f305f1937666e5eeee80c8",
+			"id": "132490115137142784",
+			"name": "Anime Discord"
+		},
+		{
+			"owner": false,
+			"permissions": 53738515,
+			"icon": "583fa421ae40e52bb14e356054e486d0",
+			"id": "162935850307551232",
+			"name": "Psyonic Gaming"
+		},
+		{
+			"owner": false,
+			"permissions": 103926785,
+			"icon": "62c34d2c5caef15e3b0f6963939a7a3e",
+			"id": "168002919793164289",
+			"name": "!Anime/Otaku/Gaming/Lewd"
+		},
+		{
+			"owner": false,
+			"permissions": 66560,
+			"icon": "0d52e6033f1ed9c09c6a12005d0b3612",
+			"id": "169735127583293441",
+			"name": "Robots Anonymous"
+		},
+		{
+			"owner": false,
+			"permissions": 536083519,
+			"icon": "6133f0f2ee9024f5426c36e24922cac7",
+			"id": "177192790390734849",
+			"name": "Elsword RP"
+		}
+	]
+}
