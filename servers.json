@@ -1,0 +1,52 @@
+{
+	"servers": [
+		{
+			"server": "105399615683092480",
+			"serverName": "Cl0ud Tail",
+			"boundChannel": "141352404011581441",
+			"voiceChannel": "106963348238635008",
+			"volume": 0.05,
+			"paused": false,
+			"timePaused": 16836,
+			"startTime": 21,
+			"nowplaying": "184432810638049291",
+			"currentTime": 2508
+		},
+		{
+			"server": "111990678472392704",
+			"serverName": "Legendary Gaming Community",
+			"boundChannel": "135590210531622912",
+			"voiceChannel": "137309980842917889",
+			"volume": 0.5,
+			"paused": true,
+			"timePaused": 750,
+			"startTime": 271,
+			"nowplaying": "184124377594331136",
+			"currentTime": 0
+		},
+		{
+			"server": "143457092336877578",
+			"serverName": "TacoTime",
+			"boundChannel": "143458765159530496",
+			"voiceChannel": "143457093125537802",
+			"volume": 0.05,
+			"paused": false,
+			"timePaused": 0,
+			"startTime": 1023,
+			"nowplaying": "182731777813643265",
+			"currentTime": 0
+		},
+		{
+			"server": "155785349623185408",
+			"serverName": "0131 Network",
+			"boundChannel": "165095269183127552",
+			"voiceChannel": "164114200388567040",
+			"volume": "0.05",
+			"paused": false,
+			"timePaused": 0,
+			"startTime": 8165,
+			"nowplaying": "182883557373378562",
+			"currentTime": 0
+		}
+	]
+}

@@ -1,0 +1,32 @@
+<div class="playlist">
+	<table data-sortable>
+		<thead id="th">
+			<tr>
+				<th>Title</th>
+				<th>Length</th>
+				<th>Website</th>
+				<th>Requested By</th>
+				<th>Position</th>
+			</tr>
+		</thead>
+		<tbody id="td">
+			<% var n; %>
+			<% if (playlist.length < 10) { %>
+			<% n=playlist.length;  %>
+			<% } else { %>
+			<% n=10; } %>
+			<% for (var i=0; i<playlist.length; i++) { %>
+			<tr>
+				<td><%= playlist[i].song_name %></td>
+				<td><%= playlist[i].song_dur %></td>
+				<td><%= playlist[i].song_type %></td>
+				<td><%= playlist[i].usr_name %></td>
+				<td><%=i+1 %></td>
+			</tr>
+			<% } %>
+			<script>
+				Sortable.init();
+			</script>
+		</tbody>
+	</table>
+</div>

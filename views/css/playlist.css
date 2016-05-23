@@ -1,56 +1,49 @@
-/** page structure **/
-#wrapper {
-	border: 1px solid black;
-  display: block;
-  width: 950px;
-  background: #555;
-  margin: 0 auto;
-  padding: 10px 17px;
-  -webkit-box-shadow: 2px 2px 3px -1px rgba(0,0,0,0.35);
+.fa {
+}
+.fa-angle-double-down, .fa-angle-double-up {
+	font-size: 24px;
 }
 
-#keywords {
-  margin: 0 auto;
-  font-size: 1.2em;
-  margin-bottom: 15px;
+.playlist {
+	z-index:1;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 50px;
+}
+table {
+	width: 100%;
+	background-color: #044ebf;
+	text-align:left;
 }
 
+table[data-sortable] th[data-sorted="true"] {
 
-#keywords thead {
+}
+table[data-sortable] th:not([data-sortable="false"]) {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
   cursor: pointer;
-  background: #6b1b00;
-}
-#keywords thead tr th { 
-  font-weight: bold;
-  border: 2px solid black;
-  padding: 12px 30px;
-  padding-left: 42px;
-}
-#keywords thead tr th span { 
-  padding-right: 20px;
-  background-repeat: no-repeat;
-  background-position: 100% 100%;
 }
 
-#keywords thead tr th.headerSortUp, #keywords thead tr th.headerSortDown {
-  background: #239087;
+thead {
+	padding: 10px 17px;
 }
 
-#keywords thead tr th.headerSortUp span {
-  background-image: url('up-arrow.png');
-}
-#keywords thead tr th.headerSortDown span {
-  background-image: url('down-arrow.png');
+th {
+	background-color: #25acd5;
+	border: 1px solid lightgrey;
+	padding: 10px 17px;
 }
 
-
-#keywords tbody tr { 
-  color: white;
-}
-#keywords tbody tr td {
-  text-align: center;
-  padding: 15px 10px;
-}
-#keywords tbody tr td.lalign {
-  text-align: left;
+td {
+	border: 1px solid lightgrey;
+	text-align: left;
+	padding: 10px 17px;
 }

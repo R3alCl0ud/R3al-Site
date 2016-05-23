@@ -1,26 +1,35 @@
-<!DOCTYPEhtml>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>R3alB0t</title>
-    <link rel="stylesheet" href="/css/main.css" type="text/css" />
+    <%- include templates/head %>
+    <title><%= guild %> - Terminal</title>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="/js/jquery.tablesorter.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="/css/playlist.css">
 </head>
-<body>
-	<%- include('templates/navbar', {user: user}) -%>
-
-	
-	<%- include('templates/playlist', { playlist : "test"}) -%>
-
+<body onload="loaded()">
+	<%- include templates/navbar {user: user} %>
+	<%- include templates/terminal-top {guild: guild, icon: icon} %>
 	<div class="terminal">
+		<div class="col_mid" id="col_mid">
+			<h6>Settings</h6>
+        <a href="/terminal/<%= gid %>/cmd"><p><i class="fa fa-hashtag" aria-hidden="true"></i><i class="fa fa-hashtag" aria-hidden="true"></i> Custom Messages<br><p2>
+            Add your own messages.</p2></p></a>
+				<a href="/terminal/<%= gid %>/music"><p><i class="fa fa-music" aria-hidden="true"></i> Music</p></a>
+		</div>
+    <div class="col_mid" id="col_mid">
+      <h6>Tabs</h6>
+        <a href="/servers/<%= user.id %>"><p><i class="fa fa-server" aria-hidden="true"></i> Switch Sessions</p></a>
+    </div>
+    <div class="col_mid" id="col_mid">
+      <h6>Usage</h6>
+        <a href="#"><p><i class="fa fa-info" aria-hidden="true"></i> Welcome</p></a>
+    </div>
 	</div>
-	
-	
-
-
-	
+	<% if (playlist != -1) { %>
+	<%- include templates/terminal-music {playlist: playlist } %>
+	<% } else if (true) {} %>
     <nav>
         <lii><p3 id="li">want to contribute or host your own click <a href="http://github.com/R3alCl0ud/R3alB0t">here</a> to go to the source</p3></lii>
     </nav>
