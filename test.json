@@ -1,0 +1,451 @@
+[
+	{
+		"guild_id": "105399615683092480",
+		"name": "general",
+		"permission_overwrites": [
+			{
+				"deny": 4096,
+				"type": "role",
+				"id": "105399615683092480",
+				"allow": 247809
+			},
+			{
+				"deny": 0,
+				"type": "role",
+				"id": "111607349810094080",
+				"allow": 260121
+			},
+			{
+				"deny": 0,
+				"type": "role",
+				"id": "119923298803908609",
+				"allow": 260096
+			}
+		],
+		"topic": "General chat (off topic)",
+		"position": 2,
+		"last_message_id": "182728570987085825",
+		"type": "text",
+		"id": "105399615683092480",
+		"is_private": false
+	},
+	{
+		"permission_overwrites": [],
+		"name": "General",
+		"type": "voice",
+		"position": 0,
+		"guild_id": "105399615683092480",
+		"bitrate": 63548,
+		"id": "105399615699869696",
+		"is_private": false
+	},
+	{
+		"permission_overwrites": [
+			{
+				"deny": 66060288,
+				"type": "role",
+				"id": "105399615683092480",
+				"allow": 0
+			},
+			{
+				"deny": 0,
+				"type": "member",
+				"id": "104063667351322624",
+				"allow": 0
+			},
+			{
+				"deny": 0,
+				"type": "role",
+				"id": "111607349810094080",
+				"allow": 66060313
+			},
+			{
+				"deny": 0,
+				"type": "role",
+				"id": "119503626157817860",
+				"allow": 36700161
+			},
+			{
+				"deny": 0,
+				"type": "role",
+				"id": "131430294057123840",
+				"allow": 36700160
+			},
+			{
+				"deny": 0,
+				"type": "role",
+				"id": "119923298803908609",
+				"allow": 36700160
+			}
+		],
+		"name": "Accend",
+		"type": "voice",
+		"position": 1,
+		"guild_id": "105399615683092480",
+		"bitrate": 96000,
+		"id": "106963348238635008",
+		"is_private": false
+	},
+	{
+		"permission_overwrites": [],
+		"name": "AFK :sleeping:",
+		"type": "voice",
+		"position": 5,
+		"guild_id": "105399615683092480",
+		"bitrate": 8000,
+		"id": "108762117737287680",
+		"is_private": false
+	},
+	{
+		"guild_id": "105399615683092480",
+		"name": "annoucements",
+		"permission_overwrites": [
+			{
+				"deny": 141312,
+				"type": "role",
+				"id": "105399615683092480",
+				"allow": 1024
+			},
+			{
+				"deny": 34816,
+				"type": "role",
+				"id": "119503626157817860",
+				"allow": 1024
+			}
+		],
+		"topic": "",
+		"position": 0,
+		"last_message_id": "181852042359209984",
+		"type": "text",
+		"id": "111596990852317184",
+		"is_private": false
+	},
+	{
+		"guild_id": "105399615683092480",
+		"name": "support",
+		"permission_overwrites": [],
+		"topic": "Help With Bugs and Issues",
+		"position": 3,
+		"last_message_id": "182681711098855424",
+		"type": "text",
+		"id": "111608025130754048",
+		"is_private": false
+	},
+	{
+		"guild_id": "105399615683092480",
+		"name": "memeteam",
+		"permission_overwrites": [
+			{
+				"deny": 0,
+				"type": "role",
+				"id": "112783154812624896",
+				"allow": 248833
+			},
+			{
+				"deny": 199680,
+				"type": "role",
+				"id": "105399615683092480",
+				"allow": 1
+			},
+			{
+				"deny": 0,
+				"type": "role",
+				"id": "111607349810094080",
+				"allow": 261145
+			},
+			{
+				"deny": 0,
+				"type": "role",
+				"id": "119923298803908609",
+				"allow": 261145
+			},
+			{
+				"deny": 131072,
+				"type": "role",
+				"id": "119503626157817860",
+				"allow": 117760
+			}
+		],
+		"topic": "",
+		"position": 6,
+		"last_message_id": "180469908599996416",
+		"type": "text",
+		"id": "112784548982444032",
+		"is_private": false
+	},
+	{
+		"guild_id": "105399615683092480",
+		"name": "accend",
+		"permission_overwrites": [
+			{
+				"deny": 261120,
+				"type": "role",
+				"id": "105399615683092480",
+				"allow": 0
+			},
+			{
+				"deny": 0,
+				"type": "role",
+				"id": "111607349810094080",
+				"allow": 261121
+			},
+			{
+				"deny": 0,
+				"type": "role",
+				"id": "119503626157817860",
+				"allow": 252929
+			},
+			{
+				"deny": 0,
+				"type": "role",
+				"id": "119923298803908609",
+				"allow": 261136
+			}
+		],
+		"topic": "",
+		"position": 1,
+		"last_message_id": "181483580713598976",
+		"type": "text",
+		"id": "115492612491706371",
+		"is_private": false
+	},
+	{
+		"permission_overwrites": [
+			{
+				"deny": 1048576,
+				"type": "role",
+				"id": "105399615683092480",
+				"allow": 0
+			},
+			{
+				"deny": 0,
+				"type": "role",
+				"id": "129313344300646400",
+				"allow": 1048576
+			},
+			{
+				"deny": 1048576,
+				"type": "role",
+				"id": "119503626157817860",
+				"allow": 0
+			},
+			{
+				"deny": 0,
+				"type": "role",
+				"id": "111607349810094080",
+				"allow": 66060288
+			},
+			{
+				"deny": 0,
+				"type": "role",
+				"id": "119923298803908609",
+				"allow": 36700160
+			}
+		],
+		"name": "Backstage",
+		"type": "voice",
+		"position": 2,
+		"guild_id": "105399615683092480",
+		"bitrate": 96000,
+		"id": "129313201853562880",
+		"is_private": false
+	},
+	{
+		"guild_id": "105399615683092480",
+		"name": "nsfw",
+		"permission_overwrites": [
+			{
+				"deny": 0,
+				"type": "role",
+				"id": "119923298803908609",
+				"allow": 117760
+			},
+			{
+				"deny": 261120,
+				"type": "role",
+				"id": "105399615683092480",
+				"allow": 0
+			},
+			{
+				"deny": 4096,
+				"type": "role",
+				"id": "132696325098700801",
+				"allow": 117760
+			},
+			{
+				"deny": 261120,
+				"type": "role",
+				"id": "119503626157817860",
+				"allow": 0
+			},
+			{
+				"deny": 0,
+				"type": "role",
+				"id": "111607349810094080",
+				"allow": 40960
+			}
+		],
+		"topic": "For \"Plot\" only",
+		"position": 7,
+		"last_message_id": "181907509706096640",
+		"type": "text",
+		"id": "130573077921660928",
+		"is_private": false
+	},
+	{
+		"guild_id": "105399615683092480",
+		"name": "junk_male",
+		"permission_overwrites": [],
+		"topic": "Max Trash 99\n",
+		"position": 9,
+		"last_message_id": "182259131141455872",
+		"type": "text",
+		"id": "131940528282533888",
+		"is_private": false
+	},
+	{
+		"guild_id": "105399615683092480",
+		"name": "computer-parts-stuff",
+		"permission_overwrites": [],
+		"topic": "",
+		"position": 8,
+		"last_message_id": "181089085199351819",
+		"type": "text",
+		"id": "133783835769831424",
+		"is_private": false
+	},
+	{
+		"guild_id": "105399615683092480",
+		"name": "music",
+		"permission_overwrites": [
+			{
+				"deny": 0,
+				"type": "role",
+				"id": "105399615683092480",
+				"allow": 84992
+			},
+			{
+				"deny": 0,
+				"type": "role",
+				"id": "111607349810094080",
+				"allow": 261120
+			},
+			{
+				"deny": 0,
+				"type": "role",
+				"id": "119923298803908609",
+				"allow": 261136
+			}
+		],
+		"topic": "",
+		"position": 4,
+		"last_message_id": "182751674228670464",
+		"type": "text",
+		"id": "141352404011581441",
+		"is_private": false
+	},
+	{
+		"permission_overwrites": [
+			{
+				"deny": 0,
+				"type": "role",
+				"id": "119923298803908609",
+				"allow": 36700160
+			},
+			{
+				"deny": 0,
+				"type": "role",
+				"id": "105399615683092480",
+				"allow": 35651584
+			},
+			{
+				"deny": 0,
+				"type": "role",
+				"id": "111607349810094080",
+				"allow": 66060288
+			}
+		],
+		"name": "Netflix'n'music",
+		"type": "voice",
+		"position": 2,
+		"guild_id": "105399615683092480",
+		"bitrate": 63840,
+		"id": "151053000423505920",
+		"is_private": false
+	},
+	{
+		"permission_overwrites": [
+			{
+				"deny": 0,
+				"type": "role",
+				"id": "105399615683092480",
+				"allow": 1
+			}
+		],
+		"name": "NSFW",
+		"type": "voice",
+		"position": 3,
+		"guild_id": "105399615683092480",
+		"bitrate": 64000,
+		"id": "166062779101347840",
+		"is_private": false
+	},
+	{
+		"permission_overwrites": [
+			{
+				"deny": 1048576,
+				"type": "role",
+				"id": "105399615683092480",
+				"allow": 0
+			},
+			{
+				"deny": 0,
+				"type": "role",
+				"id": "173613010554847232",
+				"allow": 1048576
+			}
+		],
+		"name": "wagyourtailia",
+		"type": "voice",
+		"position": 4,
+		"guild_id": "105399615683092480",
+		"bitrate": 64000,
+		"id": "174310444813516800",
+		"is_private": false
+	},
+	{
+		"guild_id": "105399615683092480",
+		"name": "maths",
+		"permission_overwrites": [],
+		"topic": null,
+		"position": 5,
+		"last_message_id": "182687864272846848",
+		"type": "text",
+		"id": "180124185543180288",
+		"is_private": false
+	},
+	{
+		"guild_id": "105399615683092480",
+		"name": "pester_chum",
+		"permission_overwrites": [
+			{
+				"deny": 1024,
+				"type": "role",
+				"id": "105399615683092480",
+				"allow": 0
+			},
+			{
+				"deny": 0,
+				"type": "role",
+				"id": "111607349810094080",
+				"allow": 1024
+			}
+		],
+		"topic": null,
+		"position": 10,
+		"last_message_id": "181948824594415616",
+		"type": "text",
+		"id": "181591574650683392",
+		"is_private": false
+	}
+]

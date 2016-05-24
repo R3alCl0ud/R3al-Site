@@ -1,15 +1,25 @@
 var events = require('events');
 var Discord = require("discord.js");
-var music = require("./lib/voice/music");
+var lib = require("./lib");
 var config = require("./options.json");
-var cmds = require("./lib/chat/chatHandler");
+var plugins = require("./plugins");
 
-console.log(cmds);
+var cmdList = {};
 
-for (var cmd in cmds)
-{
-    console.log(cmd);
+for (var i = 0; i < plugins.plList.length; i++) {
+
+    var plugin = new plugins.pluginManager(plugins.plList[i], true, {});
+
+    console.log(plugin.type);
+
+    if (plugin.type == "chat") {
+        for (cmd in plugin.plugin) {
+            if (cmd != "start")
+                cmdList[cmd] = plugin.plugin[cmd];
+        }
+    }
 }
+
 
 // Get the email and password or token
 var AuthDetails = config.Auth;
@@ -22,13 +32,13 @@ var bot = new Discord.Client({
 var options = config.Options;
 
 // command prefix
-var prefix = "#$";
+var prefix = options.prefix;
 
 // don't forget your soundcloud api key
 var scKey = options.streamKey;
 
 
-bot.loginWithToken("MTc0ODk4NzIyNDkxMjAzNTg0.CiVWNA.UMAtRs5fPxC6oFd344_0ZVOut4Y");
+bot.loginWithToken(AuthDetails.token);
 
 
 bot.on("ready", function() {
@@ -54,14 +64,14 @@ bot.on("message", function(msg) {
     msg.content = msg.content.substr(prefix.length);
 
     var contents = msg.content.toLowerCase().split(" ");
-    cmd = contents[0];
+    command = contents[0];
 
     if (msg.author.id != bot.user.id && !msg.author.bot)
     {
-        if (cmd in cmds)
+        if (command in cmdList)
         {
-            cmds[cmd](bot, msg, usr);
-            console.log("User: " + usr.username.toString() + " used the command: " + cmd);
+            cmdList[command].cmd(bot, msg, usr);
+            console.log("User: " + usr.username.toString() + " used the command: " + command);
         }
     }
 });
@@ -90,13 +100,13 @@ exports.Bot = function() {
         {
             if (bot.voiceConnections[voice].server.id == gid)
             {
-                music.playNext(bot, voice, gid);
+                lib.playNext(bot, voice, gid);
             }
         }
         botEvents.emit("musicStarted");
     }
 
-    music.musicEvents.on("songEnd", function() {
+    lib.musicEvents.on("songEnd", function() {
         botEvents.emit("songEnd");
     });
 
@@ -111,7 +121,8 @@ exports.Bot = function() {
     }
 
     function pause(sid) {
-        music.pause(bot, sid, 0);
+        VS = serverNum(sid);
+        lib.pause(bot, sid, VS);
     }
 
     function serverNum(gid) {

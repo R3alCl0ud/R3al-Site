@@ -1,7 +1,17 @@
-var events = require('events');
+var plugins = require("./plugins");
 
-exports.Test = function() {
-    function handleEvent(args) {
-        console.log("got this: " + JSON.stringify(args));
+var cmdList = {};
+
+for (var i = 0; i < plugins.plList.length; i++) {
+
+    var plugin = new plugins.pluginManager(plugins.plList[i], true, {});
+
+    console.log(plugin.type);
+
+    if (plugin.type == "chat") {
+        for (cmd in plugin.plugin) {
+            if (cmd != "start")
+                cmdList[cmd] = plugin.plugin[cmd];
+        }
     }
 }

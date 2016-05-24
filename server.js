@@ -284,18 +284,14 @@ server.get('/terminal/:gid/cmd', checkAuth, function(req, res) {
 io.on('connection', function(socket) {
     console.log('a user connected');
     var songEnd = function songEnd() {
-        console.log("does this work?");
         io.emit('songEnd');
     }
 
-    if (socket.handshake.headers.referer == "https://r3alb0t.xyz/terminal//music") {
+    var patt = new RegExp("https://r3alb0t.xyz/terminal/[0-9]+/music");
+
+    if (patt.test(socket.handshake.headers.referer)) {
         console.log("table loaded");
         bot.botEvents.on('songEnd', songEnd);
-
-    }
-    if (socket.addon)
-    {
-        console.log(socket.addon);
     }
     socket.on('disconnect', function() {
         console.log("disconnected");
