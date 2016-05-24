@@ -1,5 +1,4 @@
 var bot = require("./bot").Bot();
-var test = require('./test').Test();
 var express = require('express'),
     server = express();
 

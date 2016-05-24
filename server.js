@@ -88,7 +88,7 @@ server.get('/bot/info', checkAuth, function(req, res) {
                 user = {
                     user_id: req.user.id.toString(),
                     user_name: req.user.username,
-                    user_avatar: "defualt"
+                    user_avatar: "default"
                 };
             connection.query('INSERT INTO users  SET ?', user, function(err, result) {
                 if (err) throw err;
@@ -165,7 +165,7 @@ server.get('/servers', checkAuth, function(req, res) {
     console.log(req.query.guild_id);
     if (req.query.guild_id) {
         var guild = {
-            url: 'https://discordserver.com/api/guilds/' + req.query.guild_id,
+            url: 'https://discordapp.com/api/guilds/' + req.query.guild_id,
             headers: {
                 'Authorization': 'Bot ' + Auth.token
             }
@@ -190,14 +190,14 @@ server.get('/terminal/:gid', checkAuth, function(req, res) {
     var Guild = {};
     connection.query('SELECT * FROM `guilds` WHERE `guild_id` = ?', [req.guild_id], function(err, results, fields) {
         if (results.length == 0) {
-            res.redirect("https://discordserver.com/oauth2/authorize?&client_id=170387125261434880&scope=bot&permissions=3148800&guild_id=" + req.guild_id + "&response_type=code&redirect_uri=http://r3alb0t.xyz/servers");
+            res.redirect("https://discordapp.com/oauth2/authorize?&client_id=170387125261434880&scope=bot&permissions=3148800&guild_id=" + req.guild_id + "&response_type=code&redirect_uri=http://r3alb0t.xyz/servers");
         }
 
         if (results.length > 0) {
             if (results[0].guild_avatar != null) {
-                Guild.icon = "https://discordserver.com/api/guilds/" + req.guild_id + "/icons/" + results[0].guild_avatar + ".jpg";
+                Guild.icon = "https://discordapp.com/api/guilds/" + req.guild_id + "/icons/" + results[0].guild_avatar + ".jpg";
             } else {
-                Guild.icon = "https://discordserver.com/assets/1cbd08c76f8af6dddce02c5138971129.png";
+                Guild.icon = "https://discordapp.com/assets/1cbd08c76f8af6dddce02c5138971129.png";
             }
             Guild.name = results[0].guild_name;
             res.render('terminal.ejs', {
@@ -205,7 +205,8 @@ server.get('/terminal/:gid', checkAuth, function(req, res) {
                 guild: Guild.name,
                 icon: Guild.icon,
                 gid: req.guild_id,
-                playlist: -1
+                playlist: -1,
+                addon: ""
             });
         }
     });
@@ -214,7 +215,7 @@ server.get('/terminal/:gid', checkAuth, function(req, res) {
 server.get('/terminal/:gid/music', checkAuth, function(req, res) {
 
     var guild = {
-        url: 'https://discordserver.com/api/guilds/' + req.guild_id + '/channels',
+        url: 'https://discordapp.com/api/guilds/' + req.guild_id + '/channels',
         headers: {
             'Authorization': 'Bot ' + Auth.token
         }
@@ -224,15 +225,13 @@ server.get('/terminal/:gid/music', checkAuth, function(req, res) {
     var textChnls = [];
     var voiceChnls = [];
     request(guild, function(error, response, body) {
-        channels = JSON.parse(body);
+        channels = JSON.parse( body );
         for (var i = 0; i < channels.length; i++) {
             if (channels[i].type == "voice")
                 voiceChnls[voiceChnls.length] = channels[i];
             else
                 textChnls[textChnls.length] = channels[i];
         }
-
-        console.log(textChnls);
     });
     var playlist;
     var Guild = {};
@@ -240,9 +239,9 @@ server.get('/terminal/:gid/music', checkAuth, function(req, res) {
         playlist = results;
         connection.query('SELECT * FROM `guilds` WHERE `guild_id` = ?', [req.guild_id], function(err, results, fields) {
             if (results[0].guild_avatar != null) {
-                Guild.icon = "https://discordserver.com/api/guilds/" + req.guild_id + "/icons/" + results[0].guild_avatar + ".jpg";
+                Guild.icon = "https://discordapp.com/api/guilds/" + req.guild_id + "/icons/" + results[0].guild_avatar + ".jpg";
             } else {
-                Guild.icon = "https://discordserver.com/assets/1cbd08c76f8af6dddce02c5138971129.png";
+                Guild.icon = "https://discordapp.com/assets/1cbd08c76f8af6dddce02c5138971129.png";
             }
             Guild.name = results[0].guild_name;
             res.render('terminal.ejs', {
@@ -265,9 +264,9 @@ server.get('/terminal/:gid/cmd', checkAuth, function(req, res) {
 
     connection.query('SELECT * FROM `guilds` WHERE `guild_id` = ?', [req.guild_id], function(err, results, fields) {
         if (results[0].guild_avatar != null) {
-            Guild.icon = "https://discordserver.com/api/guilds/" + req.guild_id + "/icons/" + results[0].guild_avatar + ".jpg";
+            Guild.icon = "https://discordapp.com/api/guilds/" + req.guild_id + "/icons/" + results[0].guild_avatar + ".jpg";
         } else {
-            Guild.icon = "https://discordserver.com/assets/1cbd08c76f8af6dddce02c5138971129.png";
+            Guild.icon = "https://discordapp.com/assets/1cbd08c76f8af6dddce02c5138971129.png";
         }
         Guild.name = results[0].guild_name;
         res.render('terminal.ejs', {
@@ -282,21 +281,22 @@ server.get('/terminal/:gid/cmd', checkAuth, function(req, res) {
 
 })
 
-
-
 io.on('connection', function(socket) {
     console.log('a user connected');
-    console.log(socket.handshake.headers.referer);
     var songEnd = function songEnd() {
         console.log("does this work?");
         io.emit('songEnd');
     }
 
-    if (socket.handshake.headers.referer == "https://r3alb0t.xyz/terminal/:gid/music") {
+    if (socket.handshake.headers.referer == "https://r3alb0t.xyz/terminal//music") {
         console.log("table loaded");
         bot.botEvents.on('songEnd', songEnd);
-    }
 
+    }
+    if (socket.addon)
+    {
+        console.log(socket.addon);
+    }
     socket.on('disconnect', function() {
         console.log("disconnected");
         console.log(require('events').EventEmitter.listenerCount(bot.botEvents, 'songEnd'));
@@ -305,6 +305,19 @@ io.on('connection', function(socket) {
     });
 });
 
+server.get('/terminal/:gid/cmd/add', function(req, res) {
+
+    var cmd = {
+        guild_id: req.guild_id,
+        title: req.query.title,
+        message: req.query.message
+    };
+
+    connection.query('INSERT INTO cmd  SET ?', cmd, function (error, result) {
+        if (error) console.log(error);
+        res.redirct('/terminal/' + req.guild_id + '/cmd');
+    });
+});
 
 server.param('request', function(req, res, next, code) {
     req.code = code;

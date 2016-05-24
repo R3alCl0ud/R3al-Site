@@ -27,9 +27,11 @@
         <a href="#"><p><i class="fa fa-info" aria-hidden="true"></i> Welcome</p></a>
     </div>
 	</div>
-	<% if (playlist != -1) { %>
+	<% if (addon == "music") { %>
 	<%- include templates/terminal-music {playlist: playlist } %>
-	<% } else if (true) {} %>
+	<% } else if (addon == "cmd") { %>
+        <%- include templates/cmd.ejs %>
+    <% } %>
     <nav>
         <lii><p3 id="li">want to contribute or host your own click <a href="http://github.com/R3alCl0ud/R3alB0t">here</a> to go to the source</p3></lii>
     </nav>

@@ -1,3 +1,7 @@
+
+
+
+
 <div class="playlist">
 	<table data-sortable>
 		<thead id="th">
@@ -30,3 +34,31 @@
 		</tbody>
 	</table>
 </div>
+<script>
+  var socket = io();
+  socket.addon = "music";
+  socket.on('songEnd', function(){
+    var songs = document.getElementById("td");
+    var x = songs.getElementsByTagName("tr");
+    console.log(x.length);
+	var y;
+	for (var i = 0; i < x.length; i++)
+	{
+		y = x[i].getElementsByTagName("td");
+		if (y[4].innerHTML == 1) {
+			x[i].outerHTML = "";
+			break;
+		}
+	}
+
+    songs = document.getElementById("td");
+    x = songs.getElementsByTagName("tr");
+
+    for (var i = 0; i < x.length; i++)
+    {
+		y = x[i].getElementsByTagName("td");
+        y[4].innerHTML--;
+    }
+	Sortable.init();
+  });
+</script>
