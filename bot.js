@@ -3,23 +3,14 @@ var Discord = require("discord.js");
 var lib = require("./lib");
 var config = require("./options.json");
 var plugins = require("./plugins");
-
+var CommandRegistry = require('./lib/CommandRegistry');
+var pluginList = []
 var cmdList = {};
 
-for (var i = 0; i < plugins.plList.length; i++) {
-
-    var plugin = new plugins.pluginManager(plugins.plList[i], true, {});
-
-    console.log(plugin.type);
-
-    if (plugin.type == "chat") {
-        for (cmd in plugin.plugin) {
-            if (cmd != "start")
-                cmdList[cmd] = plugin.plugin[cmd];
-        }
-    }
+for (var i = 0; i < CommandRegistry.cmds.length; i++)
+{
+    cmdList[CommandRegistry.cmds[i].name.toLowerCase()] = CommandRegistry.cmds[i];
 }
-
 
 // Get the email and password or token
 var AuthDetails = config.Auth;
@@ -44,9 +35,24 @@ bot.loginWithToken(AuthDetails.token);
 bot.on("ready", function() {
     console.log("bot is ready");
 
+    var owner = bot.users.get("id", 104063667351322624);
+    
+
+    try {
+        bot.joinVoiceChannel(owner.voiceChannel.id);
+    } catch(err)
+    {
+        
+    }
+
+
     setTimeout(function() {
+       // bot.voiceConnection.playRawStream(song);
         bot.setPlayingGame("https://r3alb0t.xyz");
     }, 3000);
+    
+    
+    
 });
 
 bot.on("disconnected", function() {
@@ -70,7 +76,7 @@ bot.on("message", function(msg) {
     {
         if (command in cmdList)
         {
-            cmdList[command].cmd(bot, msg, usr);
+            cmdList[command].func(bot, msg, usr);
             console.log("User: " + usr.username.toString() + " used the command: " + command);
         }
     }

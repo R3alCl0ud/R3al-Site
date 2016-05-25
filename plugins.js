@@ -1,5 +1,5 @@
 /*
-PLUGIN LOADER 1.0....Expect issues
+PLUGIN LOADER 1.0.0_a1....Expect issues
 ALL Plugins will be loaded so long as they are
 present in plugins.json file.
 */
@@ -12,26 +12,47 @@ The parameter ARGS is defined as an object of data that will be given to the
 plugin to be used for later execution.
 */
 
+"use strict";
 var util = require('./lib/util/util');
-
+var fs = require('fs');
 var plugins = util.openJSON("plugins.json");
 
-exports.plList = [];
+var Plugin = require('./lib/Plugin');
+
+var pluginFolder = fs.readdirSync("./plugins");
+
 var plLoaded = [];
 
-exports.pluginManager = function(pluginObject, isActive, ARGS) {
-    this.plugin = pluginObject;
-    this.active = isActive;
-    this.params = ARGS;
-    this.type = this.plugin.start();
-};
+var CommandRegistry = require('./lib/CommandRegistry');
+
+
 
 var createPlugin = function(intentObj) {
     intentObj.active = true;
 };
 
-for (var i = 0; i < plugins.plugins.length; i++) {
-    console.log("Attempging to load plugin: "+plugins.plugins[i]+".js");
-    exports.plList.push(require('./plugins/'+plugins.plugins[i]));
-    console.log("./plugins/"+plugins.plugins[i]);
+for (var plugin in pluginFolder) {
+    if (fs.lstatSync('./plugins/'+pluginFolder[plugin]).isDirectory()) {
+        var plFolder = fs.readdirSync('./plugins/' + pluginFolder[plugin]);
+        for (var file in plFolder)
+        {
+            if (!fs.lstatSync('./plugins/'+pluginFolder[plugin]+'/'+plFolder[file]).isDirectory()) {
+                var parts = plFolder[file].split(".");
+                var ext = parts[parts.length-1];
+                var file_no_ext = parts.splice(0,parts.length-1).join(".");
+                
+                var potPlugin = require('./plugins/' + pluginFolder[plugin] + '/' + file_no_ext);
+                
+                if (potPlugin instanceof Plugin)
+                {
+                    console.log("New Plugin Found! " + potPlugin.name + " By: " + potPlugin.author);
+                }
+                else
+                {
+                    console.log("Non-plugin object found, ignoring");
+                }
+            }
+        }
+    }
 }
+module.exports = Plugin;
