@@ -1,12 +1,12 @@
 {
   "Auth" : {
-    "token" : "MTc0ODk4NzIyNDkxMjAzNTg0.CiaEgw.83sOx_SDpnoUFmoYkzpZ6zi8SiI"
+    "token" : ""
   },
   "Options" : {
     "owner": "",
-    "prefix" : "#$",
+    "prefix" : "",
     "volume" : "0.05",
     "deleteSong": true,
-    "streamKey" : "3b16b5507608db3eaace81f41aea90bb"
+    "streamKey" : ""
   }
 }
